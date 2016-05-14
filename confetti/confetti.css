@@ -1,0 +1,27 @@
+html {
+  background: url('/img/congruent-pentagon.png') center center repeat;
+  min-height: 3000px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header[role="banner"] {
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  height: 80px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.stage {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
