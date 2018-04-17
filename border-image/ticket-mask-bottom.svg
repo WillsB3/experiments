@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="142px" height="142px" viewBox="0 0 142 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ticket-mask-both</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ticket-mask-both">
+            <path d="M0,0 C0,8.8607377 0,40.5062909 0,44.9366598 C0,45.1729576 0,69.194071 0,117 C13.807119,117 25,128.19288 25,142 L117,142 C117,128.19288 128.19288,117 142,117 L142,0 C128.19288,0 13.807119,0 0,0 Z" id="ticket" fill="#000000" fill-rule="nonzero"></path>
+            <path d="M35.848848,0.5734375 C35.848848,100.383157 35.848848,147.052654 35.848848,140.581929" id="line" stroke="#FF0000" stroke-dasharray="2,1"></path>
+            <path d="M107.01935,0.5 L107.01935,140.5" id="line" stroke="#FF0000" stroke-dasharray="2,1"></path>
+            <path d="M0.5,36.562212 L141.5,36.562212" id="line" stroke="#FF0000" stroke-dasharray="2,1"></path>
+            <path d="M0,105.09677 C141.55205,105.09677 142,105.09677 142,105.09677" id="line" stroke="#FF0000" stroke-dasharray="2,1"></path>
+        </g>
+    </g>
+</svg>

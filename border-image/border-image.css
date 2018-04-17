@@ -1,0 +1,78 @@
+html {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1507104862820-1f1e3b9e5646?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=01def28551c454a450813011f0c420dc&auto=format&fit=crop&w=3000&q=90');
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+}
+
+body::after {
+    background-color: rgba(0, 0, 0, 0.47);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.ticket-container {
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.47));
+    margin: 0 auto;
+    max-width: 640px;
+    position: relative;
+    z-index: 1;
+}
+
+.ticket-list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.ticket-banner {
+    background-color: #f1f3f4;
+    background-clip: padding-box;
+    color: #414141;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1.333333333;
+    padding: 18px;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.cutout-top,
+.cutout-bottom,
+.cutout-both {
+    border-style: solid;
+    border-width: 20px;
+}
+
+.cutout-top {
+    border-image: url('ticket-mask-top.svg') 37 37 37 37 stretch;
+}
+
+.cutout-bottom {
+    border-image: url('ticket-mask-bottom.svg') 37 37 37 37 stretch;
+}
+
+.cutout-both {
+    border-image: url('ticket-mask-both.svg') 37 37 37 37 stretch;
+}
+
+.ticket {
+    background-color: #fff;
+    background-clip: padding-box;
+    min-height: 250px;
+    padding: 18px;
+}
+
+.ticket h2 {
+    margin: 0;
+}
