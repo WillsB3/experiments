@@ -11,15 +11,16 @@ registerPaint('ticket', class {
         let cutoutTop = properties.get('--cutout-top');
         let cutoutBottom = properties.get('--cutout-bottom');
         const radius = parseInt(properties.get('--cutout-radius').toString());
-        const height = geom.height + 4;
-        const width = geom.width + 4;
+        const height = geom.height;
+        const width = geom.width;
 
-        console.group('cutout');
+        // console.group('cutout');
         // console.log('--cutout-radius', radius);
         // console.log('ctx', ctx);
-        console.log('geom', geom);
         // console.log('properties', properties);
         // console.log('cutoutTop', cutoutTop, 'cutoutBottom', cutoutBottom);
+        // console.info(height, width);
+        // console.groupEnd();
 
         const radToDeg = (rad) => {
             return rad * 180 / Math.PI;
@@ -35,40 +36,18 @@ registerPaint('ticket', class {
 
         // Main ticket area
         ctx.fillStyle = '#ffffff';
-        ctx.fillRect(-2, -2, width, height);
+        ctx.fillRect(0, 0, width, height);
 
         // Draw cutouts
         ctx.globalCompositeOperation = 'destination-out';
 
-        const topLeft = {
-            x: 0,
-            y: 0
-        };
-
-        const topRight = {
-            x: geom.width,
-            y: 0
-        };
-
-        const bottomRight = {
-            x: geom.width,
-            y: geom.height
-        };
-
-        const bottomLeft = {
-            x: 0,
-            y: geom.height
-        };
-
         if (cutoutTop) {
-            drawCutout(topLeft.x, topLeft.y);
-            drawCutout(topRight.x, topRight.y);
+            drawCutout(0, 0);
+            drawCutout(width, 0);
         }
         if (cutoutBottom) {
-            drawCutout(bottomRight.x, bottomRight.y);
-            drawCutout(bottomLeft.x, bottomLeft.y);
+            drawCutout(width, height);
+            drawCutout(0, height);
         }
-
-        console.groupEnd();
     }
 });
