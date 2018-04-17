@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="CSS Paint API Experiemnt">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+  <title>CSS Paint API</title>
+  <link rel="stylesheet" href="css-paint.css">
+</head>
+
+<body>
+  <div class="ticket-container">
+    <div class="ticket-group">
+      <div class="ticket-banner">
+        First Group
+      </div>
+      <ul class="ticket-list">
+        <li class="ticket cutout-bottom">
+          <h2>Ticket A</h2>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket B</h2>
+          <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket C</h2>
+          <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket D</h2>
+          <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="ticket-group">
+      <div class="ticket-banner cutout-top">
+        Second Group
+      </div>
+      <ul class="ticket-list">
+        <li class="ticket cutout-bottom">
+          <h2>Ticket A</h2>
+          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket B</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket C</h2>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket D</h2>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="ticket-group">
+      <div class="ticket-banner cutout-top">
+        Third Group
+      </div>
+      <ul class="ticket-list">
+        <li class="ticket cutout-bottom">
+          <h2>Ticket A</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket B</h2>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket C</h2>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket D</h2>
+          <p>Praesent commodo cursus magna, Donec id elit non mi porta gravida at eget metus.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket E</h2>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
+        </li>
+        <li class="ticket cutout-top cutout-bottom">
+          <h2>Ticket F</h2>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    if (location.protocol === 'http:' && location.hostname !== 'localhost')
+      location.protocol = 'https:';
+    if ('paintWorklet' in CSS) {
+      CSS.paintWorklet.addModule('ticket-paint-worklet.js');
+    } else {
+      document.body.innerHTML = 'You need support for <a href="https://drafts.css-houdini.org/css-paint-api/">CSS Paint API</a> to view this demo :(';
+    }
+  </script>
+</body>
+
+</html>
