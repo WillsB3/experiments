@@ -10,7 +10,7 @@ body {
 }
 
 body::after {
-    background-color: rgba(0, 0, 0, 0.47);
+    background-color: rgba(0, 0, 0, 0.6);
     content: '';
     display: block;
     height: 100%;
@@ -21,11 +21,18 @@ body::after {
 }
 
 .ticket-container {
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.47));
+    /* filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.47)); */ /* <-- Slow :( */
     margin: 0 auto;
     max-width: 640px;
     position: relative;
     z-index: 1;
+}
+
+@media screen and (max-width: 660px) {
+    .ticket-container {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
 }
 
 .ticket-list {
@@ -46,23 +53,32 @@ body::after {
     z-index: 3;
 }
 
-.cutout-top {
-    --cutout-radius: 15;
-    --cutout-top: yes;
+.cutout-top,
+.cutout-bottom,
+.cutout-both {
+    --cutout-radius: 8;
     -webkit-mask-image: paint(ticket);
-    /* background-image: paint(ticket); */
+}
+
+.cutout-top {
+    --cutout-edge: top;
 }
 
 .cutout-bottom {
-    --cutout-radius: 15;
-    --cutout-bottom: yes;
-    -webkit-mask-image: paint(ticket);
-    /* background-image: paint(ticket); */
+    --cutout-edge: bottom;
+}
+
+.cutout-both {
+    --cutout-edge: both;
 }
 
 .ticket {
     background-color: #fff;
     padding: 18px;
+}
+
+.ticket:not(:last-child) {
+    border-bottom: 1px dashed #c0c0c0;
 }
 
 .ticket h2 {
